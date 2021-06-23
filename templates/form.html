@@ -1,0 +1,229 @@
+<style type="text/css">
+	.form-group{
+
+		display: flex;
+	}
+	.submit_form{
+		justify-content: center;
+		text-align: center;
+	}
+	.form-group-row{
+
+		margin-top: -18px;
+    	margin-bottom: 28px;
+	}
+	#fname{
+
+		color: yellowgreen;
+	    font-size: large;
+	    font-style: normal;
+	    font-weight: bold;
+	    padding-top: -8px;
+	    margin-top: 2px;
+	    color: black;
+    	font-family: ui-sans-serif;
+    	border-radius: 20px;
+    	outline: 0;
+    	border: 0;
+	}
+
+	#input_text {
+
+		color: aquamarine;
+	    font-size: large;
+	    font-style: normal;
+	    font-weight: bold;
+	    padding-top: 5px;
+	    margin-top: 25px;
+	    padding-left: 30px;
+	    width: 350px;
+
+	}
+
+	#columns{
+
+		display: flex;
+		margin-top: -8px;
+		margin-left: 188px;
+	}
+
+	#l1{
+		font-size: 28px;
+	    padding-left: 43px;
+	    margin-left: 45px;
+	    color: aqua;
+	}
+	#bt1{
+    	
+    	font-size: larger;
+	    width: 120px;
+	    height: 46px;
+	    border-radius: 25px;
+	    margin: 49px;
+	    background-color: chocolate;
+	    text-align: center;
+	    margin-left: -4px;
+
+	}
+
+	#bt2{
+    	
+    	font-size: larger;
+	    width: 120px;
+	    height: 46px;
+	    border-radius: 25px;
+	    margin: 49px;
+	    background-color: chocolate;
+	    text-align: center;
+	    margin-left: -4px;
+
+	}
+
+	#op1{
+
+		size: 40px;
+		color: deeppink;
+	    font-size: xx-large;
+	    width: 269px;;
+	    height: 42px;
+	    padding-left: 100px;
+	    padding-top: 10px;
+	    margin-left: 70px;
+	    border-radius: 25px;
+	    padding-left: 41px;
+	    padding-top: 0px;
+	    margin-top: 31px;
+	    background-color: azure;
+	}
+</style>
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+			 
+			<form action="/predict1" method="POST">
+			<fieldset>
+
+         <div id="columns">
+				   <!--  input type for Gender -->
+				    <div class="form-group-row">
+				      <label for="staticEmail" id = 'input_text'
+								 class="col-sm-2 col-form-label">Gender</label>
+				      <div class="col-sm-10">
+				        <input type="text" placeholder="1-male/0-female" id="fname"  name="Gender" value="0">
+				      </div>
+				    </div>
+
+				    <!--  input type for Age  -->
+				    <div class="form-group-row">
+				      <label for="staticEmail" id = 'input_text'
+								 class="col-sm-2 col-form-label">Age</label>
+				      <div class="col-sm-10">
+				        <input type="text" id="fname" name="Age" placeholder="Age" value="0" >
+				      </div>
+				    </div>
+         </div>
+
+         <div id="columns">
+
+					    <!--  input type for Driving_License -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Driving License</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Driving_License" placeholder="Driving License" value="0">
+					      </div>
+					    </div>
+
+					    <!--  input type for Region_Code -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Region Code</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Region_Code" placeholder="Region Code" value="0" >
+					      </div>
+					    </div>
+</div>
+<div id="columns">
+					    <!--  input type for Previously_Insured -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Previously Insured</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Previously_Insured" placeholder="Previously Insured" value="0" ><
+					      </div>
+					    </div>
+		
+
+					    <!--  input type for Vehicle_Age -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Vehicle Age</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Vehicle_Age" placeholder="Vehicle Age" value="0">
+					      </div>
+					    </div>
+
+        </div>
+        <div id="columns">
+					    <!--  input type for Vehicle_Damage -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Vehicle Damage</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Vehicle_Damage" placeholder="Vehicle Damage" value="0"
+					        >
+					      </div>
+					    </div>
+
+					    <!--  input type for Annual_Premium -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Annual Premium</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Annual_Premium" placeholder="Annual Premium" value="0" >
+					      </div>
+					    </div>
+        </div>
+        <div id="columns">
+					    <!--  input type for Policy_Sales_Channel -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Policy Sales Channel</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Policy_Sales_Channel" placeholder="Policy Sales Channel" value="0" >
+					      </div>
+					    </div>
+
+					    <!--  input type for Vintage -->
+					    <div class="form-group-row">
+					      <label for="staticEmail" id = 'input_text'
+									 class="col-sm-2 col-form-label">Vintage</label>
+					      <div class="col-sm-10">
+					        <input type="text" id="fname" name="Vintage"placeholder="Vintage" value="0">
+					      </div>
+					    </div>
+
+		</div>					 
+
+			<div id="columns" class="submit_form">
+			
+			<button id ="bt1"  > Submit </button>
+			
+			<div>
+				<label id = "l1"> output </label>
+				<input type="text" id="op1"  placeholder=" " value="{{pred}}"> </label>
+
+			</div>
+			
+
+		</div>
+					</fieldset>
+					</form>
+
+			 {% endblock %}
+
+
+
+ 
