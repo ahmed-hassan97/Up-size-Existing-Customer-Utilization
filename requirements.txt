@@ -4,3 +4,4 @@ pandas
 gunicorn
 Jinja2==2.11.1
 Flask-Cors
+gunicorn==19.9.0
