@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    image: meapal/health-vs-vehicle-insurance:latest
+    volumes:
+      - ./:/app
+    ports:
+      - "4500:80"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=1
+      - TF_CPP_MIN_LOG_LEVEL=2

@@ -1,7 +1,4 @@
-Flask
+streamlit
 numpy 
 pandas 
-gunicorn
-Jinja2==2.11.1
-Flask-Cors
-gunicorn
+

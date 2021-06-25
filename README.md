@@ -51,7 +51,12 @@ Now, in order to predict, whether the customer would be interested in Vehicle in
 ![sdc-1-1024x427](./imgs/roc.PNG) 
 
 ---
-## steps of project :
+## steps of project
+
+
+
+<img src="https://user-images.githubusercontent.com/50107057/123157556-f6f7f800-d46a-11eb-9e01-38f116c958ea.jpg" width="600" height = "300">
+
 ---
 
 * Data Exploration

@@ -1,18 +1,25 @@
+## import library 
+
 from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as np
 
+## create Flask app 
 app = Flask(__name__)
 
+
+## load Pretrained model 
 with open('gbc.pickle', 'rb') as f:
     loaded_model = pickle.load(f)
 
 
+## return to Home Page 
 @app.route('/')
 def home_page():
 	return render_template('form.html')
 
 
+## git Data from Post Request 
 @app.route('/predict1' ,  methods=['POST' ,'GET'])
 def predict():
 	op1 =""
@@ -43,6 +50,7 @@ def predict():
 	
 
 
+## rum Main application 
 if __name__ == "__main__":
 	app.run(debug = True)
 
